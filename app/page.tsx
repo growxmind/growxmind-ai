@@ -40,12 +40,12 @@ export default function Home() {
   )
 }
 
-const styles = {
+const styles: any = {
   page: {
     background: "#070A12",
     minHeight: "100vh",
     color: "white",
-    textAlign: "center",
+    textAlign: "center" as const,
     paddingTop: 120
   },
 
