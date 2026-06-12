@@ -17,24 +17,54 @@ export default function Home() {
   }
 
   return (
-    <div style={{ textAlign: "center", paddingTop: 100, background: "#0b0f19", color: "white", minHeight: "100vh" }}>
+    <div style={styles.page}>
+
       <h1>🔥 GrowXmind AI</h1>
+
       <p>Your AI Discipline Coach</p>
 
       <input
         placeholder="Enter email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        style={{ padding: 10, marginTop: 20 }}
+        style={styles.input}
       />
 
-      <br />
-
-      <button onClick={join} style={{ marginTop: 20, padding: 10 }}>
+      <button onClick={join} style={styles.btn}>
         Join Waitlist
       </button>
 
       <p>{msg}</p>
+
     </div>
   )
+}
+
+const styles = {
+  page: {
+    background: "#070A12",
+    minHeight: "100vh",
+    color: "white",
+    textAlign: "center",
+    paddingTop: 120
+  },
+
+  input: {
+    padding: 12,
+    width: 250,
+    marginTop: 20,
+    borderRadius: 10,
+    border: "1px solid #1F2937",
+    background: "#111827",
+    color: "white"
+  },
+
+  btn: {
+    marginTop: 15,
+    padding: 12,
+    background: "#6366F1",
+    color: "white",
+    borderRadius: 10,
+    border: "none"
+  }
 }
